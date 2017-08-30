@@ -21,8 +21,11 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Anon Chat</h1>
-        <Link to={room}>Create random room</Link>
-        <input id="joinbox" type="text"></input><button onClick={this.joinRoom}>Join</button>
+        <Link to={room} id="createRoom">Create random room</Link>
+        <div>
+          <input id="joinbox" type="text" placeholder="Room name here"></input>
+          <button className="btn" onClick={this.joinRoom}>Join</button>
+        </div>
       </div>
     );
   }
